@@ -268,7 +268,9 @@ public class ContentService {
     public List<DatiBase> findContentsBySection(String idSite, Integer idRoot) {
         log.debug("Finding contents for section: {} and site: {}", idRoot, idSite);
         List<Content> contents = contentRepository.findContentsBySection(idSite, idRoot);
-        return datiBaseMapper.toDatiBaseList(contents);
+        List<DatiBase> items = datiBaseMapper.toDatiBaseList(contents);
+        popolaGalleryContenuti(items);
+        return items;
     }
 
     /**

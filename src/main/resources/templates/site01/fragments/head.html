@@ -12,15 +12,19 @@
     </title>
 
     <meta name="keywords" th:content="${config != null && config.sito != null ? config.sito.keywords : ''}" />
-    <meta name="description" th:content="${config != null && config.sito != null ? config.sito.libero2 : ''}" />
-    <meta name="author" content="Studiodomino srl"/>
+    <meta name="description"
+          th:content="${(post != null and post.riassunto != null and !post.riassunto.isEmpty()) ? #strings.abbreviate(post.riassunto.replaceAll('&lt;[^&gt;]*&gt;', ' '), 160) :
+                        ((section != null and section.riassunto != null and !section.riassunto.isEmpty()) ? #strings.abbreviate(section.riassunto.replaceAll('&lt;[^&gt;]*&gt;', ' '), 160) :
+                        (config != null && config.sito != null ? config.sito.libero2 : ''))}" />
+    <meta name="author" content="Ludum"/>
     <meta name="DC.Description" th:content="${post != null ? post.titolo : (section != null ? section.titolo : (pageTitle != null ? pageTitle : 'Home'))}"/>
+    <link rel="canonical" th:if="${currentUrl != null}" th:href="${currentUrl}" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png"
-          th:href="@{/site01/images/favicon.png}"/>
+          th:href="@{/site01/images/ludumFavicon.png}"/>
     <link rel="shortcut icon" type="image/png"
-          th:href="@{/site01/images/favicon.png}"/>
+          th:href="@{/site01/images/ludumFavicon.png}"/>
     <link rel="apple-touch-icon"
           th:href="@{'/' + ${config.sito.path2} + '/assets/apple-touch-icon.png'}"/>
     <link rel="apple-touch-icon" sizes="72x72"
@@ -33,7 +37,7 @@
     <!-- Mobile Specific Metas -->
     <meta name="HandheldFriendly" content="true" />
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="author" content="Studiodomino srl - Potenza"/>
+    <meta name="author" content="Ludum - Potenza"/>
     <meta name="robots" content="index, follow"/>
 
     <!-- CSS (Educeet) -->
@@ -47,6 +51,7 @@
     <link rel="stylesheet" th:href="@{'/' + ${config.sito.path2} + '/assets/css/spacing.css'}">
     <link rel="stylesheet" th:href="@{'/' + ${config.sito.path2} + '/assets/css/main.css'}">
     <link rel="stylesheet" th:href="@{'/' + ${config.sito.path2} + '/assets/css/educeet-custom.css'}">
+    <link rel="stylesheet" th:href="@{'/' + ${config.sito.path2} + '/js/gdpr-cookie-master/css/jquery-eu-cookie-law-popup.css'}">
 
     <style>
         .goog-te-banner-frame.skiptranslate { display: none !important; }

@@ -1,78 +1,194 @@
 <th:block xmlns:th="http://www.thymeleaf.org" th:fragment="homeTiles_09">
-  <!-- Section: SERVIZI ICT -->
-  <section class="layer-overlay overlay-dark-9 d-none d-sm-block" th:attr="data-tm-bg-img=@{/images/bg/bg1.jpg}">
-    <div class="container">
-      <div class="section-content">
-        <div class="row align-items-center">
-          <div class="col-md-12 col-md-8 col-lg-8 col-xl-8">
-            <h2 class="text-white text-uppercase font-size-84 font-weight-800 pl-10 mt-0 mb-60 line-height-1">
-              <span class="text-theme-colored1">Servizi</span> ITC
-            </h2>
+    <section class="it-categories-area pt-40 pb-95">
+        <div class="container">
             <div class="row">
-              <div class="col-sm-6">
-                <div class="tm-sc-icon-box icon-box icon-left tm-iconbox-icontype-font-icon text-left iconbox-centered-in-responsive iconbox-theme-colored1 icon-position-icon-left mb-60">
-                  <div class="icon-box-wrapper">
-                    <a class="icon icon-type-font-icon icon-circled icon-gray icon-theme-colored1" th:href="@{/page/1/376/1/2020/Software_gestionale}"><i class="fab fa-internet-explorer"></i></a>
-                    <div class="icon-text"><p class="text-white mb-0">Realizzazione siti web su misura per la tua azienda. Progettazione e sviluppo di programmi gestionali personalizzati.</p></div>
-                    <div class="clearfix"></div>
-                  </div>
+                <div class="col-12">
+                    <div class="it-categories-section-title-box text-center mb-50">
+                        <span class="it-section-subtitle">Cosa trovi da noi</span>
+                        <h4 class="it-section-title">Le nostre <span class="z-index-1">aree</span></h4>
+                    </div>
                 </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tm-sc-icon-box icon-box icon-left tm-iconbox-icontype-font-icon text-left iconbox-centered-in-responsive iconbox-theme-colored1 icon-position-icon-left mb-60">
-                  <div class="icon-box-wrapper">
-                    <a class="icon icon-type-font-icon icon-circled icon-gray icon-theme-colored1" th:href="@{/page/1/381/1/2020/Assistenza_hardware_e_software}"><i class="fas fa-laptop-code"></i></a>
-                    <div class="icon-text"><p class="text-white mb-0">Assistenza tecnica hardware e software per le aziende e per la Pubblica Amministrazione.</p></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tm-sc-icon-box icon-box icon-left tm-iconbox-icontype-font-icon text-left iconbox-centered-in-responsive iconbox-theme-colored1 icon-position-icon-left mb-60">
-                  <div class="icon-box-wrapper">
-                    <a class="icon icon-type-font-icon icon-circled icon-gray icon-theme-colored1" th:href="@{/page/1/393/1/2020/Aruba_PEC_-_Firma_digitale_-_SPID}"><i class="fas fa-mail-bulk"></i></a>
-                    <div class="icon-text"><p class="text-white mb-0">Rilascio e attivazione dei servizi digitali per aziende e cittadini: firma digitale, posta elettronica certificata - PEC.</p></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tm-sc-icon-box icon-box icon-left tm-iconbox-icontype-font-icon text-left iconbox-centered-in-responsive iconbox-theme-colored1 icon-position-icon-left mb-60">
-                  <div class="icon-box-wrapper">
-                    <a class="icon icon-type-font-icon icon-circled icon-gray icon-theme-colored1" th:href="@{/page/1/389/1/2020/SEO_&_Social_Media_Marketing}"><i class="fas fa-share-alt"></i></a>
-                    <div class="icon-text"><p class="text-white mb-0">Web & Social Communication - Servizi di gestione profili social, aggiornamento contenuti e tecniche SEO.</p></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tm-sc-icon-box icon-box icon-left tm-iconbox-icontype-font-icon text-left iconbox-centered-in-responsive iconbox-theme-colored1 icon-position-icon-left mb-60">
-                  <div class="icon-box-wrapper">
-                    <a class="icon icon-type-font-icon icon-circled icon-gray icon-theme-colored1" th:href="@{/page/1/395/1/2020/Resocontazioni_e_Trascrizioni}"><i class="fas fa-keyboard"></i></a>
-                    <div class="icon-text"><p class="text-white mb-0">Servizi di trascrizione e resocontazione di documenti audio per la Pubblica Amministrazione.</p></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tm-sc-icon-box icon-box icon-left tm-iconbox-icontype-font-icon text-left iconbox-centered-in-responsive iconbox-theme-colored1 icon-position-icon-left mb-60">
-                  <div class="icon-box-wrapper">
-                    <a class="icon icon-type-font-icon icon-circled icon-gray icon-theme-colored1" th:href="@{/page/1/394/1/2020/Conservazione_sostitutiva}"><i class="far fa-list-alt"></i></a>
-                    <div class="icon-text"><p class="text-white mb-0">Servizi di Conservazione Sostitutiva e Fatturazione Elettronica.</p></div>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!--div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            TODO: contenuto di ../jspUser/_contatti3.jsp -- mandami quel file, non l'ho ancora convertito
-                 (nota: qui il JSP usa _contatti3.jsp, mentre in homeTiles_03 era _contatti2.jsp -- probabilmente
-                 sono due varianti diverse del modulo di richiesta informazioni, non un errore)
-            <div th:replace="~{site01/fragments/jspUser/contatti3 :: contatti3(oggettoRichiesta='Informazioni generali', idOggettoRichiesta=0)}"></div>
-          </div-->
+
+            <style>
+                .bento-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-auto-rows: 115px;
+                    gap: 16px;
+                }
+                .bento-cell {
+                    display: block;
+                    text-decoration: none;
+                    perspective: 1400px;
+                    border-radius: 24px;
+                }
+                .bento-cell .flip-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 24px;
+                    transition: transform .75s cubic-bezier(.4,.15,.2,1);
+                    transform-style: preserve-3d;
+                    box-shadow: 0 15px 30px rgba(1,6,20,0.12);
+                }
+                .bento-cell:hover .flip-inner { transform: rotateY(180deg); }
+                .bento-cell .flip-face {
+                    position: absolute;
+                    inset: 0;
+                    backface-visibility: hidden;
+                    border-radius: 24px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    color: #fff;
+                }
+                .bento-cell .flip-front {
+                    justify-content: flex-end;
+                    padding: 22px;
+                    background: linear-gradient(150deg, var(--c1), var(--c2));
+                }
+                .bento-cell .flip-back {
+                    transform: rotateY(180deg);
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 22px;
+                    background: linear-gradient(150deg, var(--c2), var(--c1));
+                }
+                .bento-cell .bg-icon {
+                    position: absolute;
+                    right: -18px;
+                    bottom: -22px;
+                    font-size: 130px;
+                    color: rgba(255,255,255,0.14);
+                    line-height: 1;
+                }
+                .bento-cell h6 {
+                    position: relative;
+                    z-index: 1;
+                    font-weight: 800;
+                    margin: 0;
+                    font-size: 17px;
+                }
+                .bento-cell .flip-back p {
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin: 0 0 12px;
+                    opacity: .95;
+                }
+                .bento-cell .flip-back .cta {
+                    font-size: 13px;
+                    font-weight: 700;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+                .bento-big { grid-column: span 2; grid-row: span 2; }
+                .bento-big .bg-icon { font-size: 190px; }
+                .bento-big h6 { font-size: 24px; }
+                .bento-wide { grid-column: span 2; grid-row: span 1; }
+
+                @media (max-width: 767px) {
+                    .bento-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+                    .bento-big, .bento-wide { grid-column: span 2; }
+                }
+            </style>
+
+            <div class="bento-grid">
+
+                <a href="#" class="bento-cell bento-big" style="--c1: var(--it-theme-1); --c2: var(--it-theme-5);">
+                    <div class="flip-inner">
+                        <div class="flip-face flip-front">
+                            <i class="fa-solid fa-vr-cardboard bg-icon"></i>
+                            <h6>Spazi Immersivi e Tecnologie</h6>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <p>Ambienti multimediali, realtà virtuale e aumentata, giochi e strumenti digitali.</p>
+                            <span class="cta">Scopri di più <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-cell" style="--c1: #06d6c7; --c2: var(--it-theme-1);">
+                    <div class="flip-inner">
+                        <div class="flip-face flip-front">
+                            <i class="fa-solid fa-flask bg-icon"></i>
+                            <h6>Attività e Laboratori</h6>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <p>Laboratori creativi e tecnologici per ogni età.</p>
+                            <span class="cta">Scopri <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-cell" style="--c1: var(--it-theme-5); --c2: #ffb35c;">
+                    <div class="flip-inner">
+                        <div class="flip-face flip-front">
+                            <i class="fa-solid fa-cake-candles bg-icon"></i>
+                            <h6>Feste di Compleanno</h6>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <p>Il tuo giorno speciale, tra luci e proiezioni.</p>
+                            <span class="cta">Scopri <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-cell" style="--c1: #ffb35c; --c2: var(--it-theme-5);">
+                    <div class="flip-inner">
+                        <div class="flip-face flip-front">
+                            <i class="fa-solid fa-bus bg-icon"></i>
+                            <h6>Uscite Didattiche</h6>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <p>Percorsi ed esperienze fuori dall'aula.</p>
+                            <span class="cta">Scopri <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-cell" style="--c1: var(--it-theme-1); --c2: #06d6c7;">
+                    <div class="flip-inner">
+                        <div class="flip-face flip-front">
+                            <i class="fa-solid fa-calendar-days bg-icon"></i>
+                            <h6>Eventi in Programma</h6>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <p>Tutti i prossimi appuntamenti da non perdere.</p>
+                            <span class="cta">Scopri <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-cell bento-wide" style="--c1: #06d6c7; --c2: var(--it-theme-5);">
+                    <div class="flip-inner">
+                        <div class="flip-face flip-front">
+                            <i class="fa-solid fa-school bg-icon"></i>
+                            <h6>Proposte per le Scuole</h6>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <p>Progetti dedicati a scuola dell'infanzia e primaria, percorsi di approfondimento.</p>
+                            <span class="cta">Scopri di più <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-cell bento-wide" style="--c1: var(--it-theme-5); --c2: var(--it-theme-1);">
+                    <div class="flip-inner">
+                        <div class="flip-face flip-front">
+                            <i class="fa-solid fa-phone bg-icon"></i>
+                            <h6>Contatti e Prenotazioni</h6>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <p>Scrivici o chiamaci per informazioni e prenotazioni.</p>
+                            <span class="cta">Scopri di più <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </th:block>
