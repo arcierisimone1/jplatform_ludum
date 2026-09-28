@@ -17,13 +17,19 @@
                 <div class="col-lg-8">
 
                     <style>
-                        /* Il CSS globale .it-course-meta e' pensato per le card (dove il
-                           primo elemento e' separato da un bordo/padding grande dagli
-                           altri): qui, nella pagina dettaglio, vogliamo che tutte le
-                           voci abbiano la stessa spaziatura fra loro. */
+                        /* spaziatura uniforme tra le voci meta (diverso dallo stile card) */
                         .it-corso-detail-meta span:first-child {
                             padding-right: 0 !important;
                             border-right: none !important;
+                        }
+                        .it-corso-detail-meta > span {
+                            margin-right: 20px;
+                        }
+                        .it-corso-detail-meta > span:last-child {
+                            margin-right: 0;
+                        }
+                        .it-corso-detail-meta i {
+                            margin-right: 0 !important;
                         }
                     </style>
 

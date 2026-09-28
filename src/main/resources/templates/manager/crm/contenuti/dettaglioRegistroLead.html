@@ -131,11 +131,27 @@
                                             <!-- hidden -->
                                         <input type="hidden" name="id"               th:value="${registroLead.id}">
                                         <input type="hidden" name="idleadstore"      th:value="${registroLead.idleadstore}">
-                                        <input type="hidden" name="idamministratore" th:value="${registroLead.idamministratore}">
+                                            <input type="hidden" name="idamministratore" id="idamministratoreLead" th:value="${registroLead.idamministratore}">
                                         <input type="hidden" name="store"            th:value="${registroLead.store}">
                                         <input type="hidden" name="direzione"        th:value="${registroLead.direzione}">
 
                                         <div class="row form-group">
+
+                                            <div class="col-lg-12 mb-2">
+                                                <label class="form-label fw-bold">Assegnato a</label>
+                                                <div id="nomeOperatoreAssegnato" class="form-control-plaintext">
+                                                    <span th:text="${registroLead.amministratore != null ? registroLead.amministratore.nome + ' ' + registroLead.amministratore.cognome : 'Nessuno'}">Nessuno</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12 mb-2">
+                                                <label for="ricercaOperatoreLead" class="form-label">Assegna ad altro operatore</label>
+                                                <input type="text"
+                                                       id="ricercaOperatoreLead"
+                                                       class="form-control js-autocomplete"
+                                                       data-url="/admin/crm/lead/operatori/search"
+                                                       placeholder="Scrivi nome operatore...">
+                                            </div>
 
                                             <div class="col-lg-6">
                                                 <label for="data" class="form-label">Data</label>
