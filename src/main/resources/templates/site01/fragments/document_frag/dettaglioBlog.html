@@ -3,15 +3,14 @@
   <section id="page-content">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-8 pe-5 lg-pe-3 md-pe-15px md-mb-50">
           <div th:utext="${content.testo}"></div>
+        </div>
+        <div class="col-lg-4 ps-4 lg-ps-15px">
+          <div th:replace="~{site01/fragments/section_frag/_sidebar :: widget}"></div>
         </div>
       </div>
     </div>
   </section>
   <!-- end: Content -->
 </th:block>
-
-
-
-

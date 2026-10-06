@@ -78,9 +78,23 @@
         </div>
     </div>
 
-    <!-- Widget: Altre sezioni della stessa categoria di menu - solo per pagine NON di corsi -->
+    <!-- Widget: Altre sezioni - preferisce il parent DIRETTO della sezione corrente
+     (i veri "fratelli"). Se non disponibile (pagine senza parentSection in model),
+     ricade sul comportamento storico: categoria di primo livello nel menu. -->
+    <div th:if="${!isCorso and parentSection != null and parentSection.subsection != null and !#lists.isEmpty(parentSection.subsection)}"
+         class="sidebar-widget mb-60">
+        <h4 class="sidebar-widget-title mb-25" th:text="${parentSection.titolo}">Categoria</h4>
+        <div class="sidebar-widget-content">
+            <ul style="list-style:none; padding:0; margin:0;">
+                <li th:each="sib : ${parentSection.subsection}" th:if="${sib.menu1.toString() != '0' and (section == null or sib.id != section.id)}" style="margin-bottom:15px;">
+                    <a class="sidebar-widget-list" th:href="@{'/' + ${sib.url}}" th:text="${sib.titolo}">Sezione</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <th:block th:each="topSec : ${config != null and config.sezioniFront != null ? config.sezioniFront : {}}"
-              th:if="${!isCorso and topId != null and topSec.id == topId and topSec.subsection != null and !#lists.isEmpty(topSec.subsection)}">
+              th:if="${!isCorso and parentSection == null and topId != null and topSec.id == topId and topSec.subsection != null and !#lists.isEmpty(topSec.subsection)}">
         <div class="sidebar-widget mb-60">
             <h4 class="sidebar-widget-title mb-25" th:text="${topSec.titolo}">Categoria</h4>
             <div class="sidebar-widget-content">

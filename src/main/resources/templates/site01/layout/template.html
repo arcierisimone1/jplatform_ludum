@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-  xmlns:layout="http://www.ultraq.net.nz">
-    <head>
-        <!-- Carica i metatag e i CSS comuni -->
-        <th:block th:replace="~{site01/fragments/head :: head}"></th:block>
-    </head>
+      xmlns:layout="http://www.ultraq.net.nz">
+<head>
+    <!-- Carica i metatag e i CSS comuni -->
+    <th:block th:replace="~{site01/fragments/head :: head}"></th:block>
+</head>
 
-    <body class="container-1340px eupopup eupopup-bottom">
+<body class="container-1340px">
 
-        <!-- Body wrapper -->
-        <div id="wrapper" class="clearfix">
-            <!-- Sezione Header (sostituibile se necessario) -->
-            <th:block layout:fragment="header">
-                <th:block th:replace="~{site01/fragments/header :: header}"></th:block>
-            </th:block>
+<!-- Body wrapper -->
+<div id="wrapper" class="clearfix">
+    <!-- Sezione Header (sostituibile se necessario) -->
+    <th:block layout:fragment="header">
+        <th:block th:replace="~{site01/fragments/header :: header}"></th:block>
+    </th:block>
 
-            <!-- Contenuto Principale: qui verrà iniettato il codice delle singole pagine -->
-            <div class="main-content-area" id="main-container">
-                <main layout:fragment="content"></main>
-            </div>
+    <!-- Contenuto Principale: qui verrà iniettato il codice delle singole pagine -->
+    <div class="main-content-area" id="main-container">
+        <main layout:fragment="content"></main>
+    </div>
 
-            <div class="sdcp-widget" id="sdcpWidget">
-                <a class="sdcp-pill" href="https://www.youtube.com/@LudumInteractiveWorld" target="_blank" rel="noopener">
-                    <span class="sdcp-icon"><svg width="16" height="16" viewBox="0 0 576 512" fill="#fff" style="width:16px;height:16px;"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64s-170.8 0-213.4 11.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.1 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></span>
-                    <span>Seguici su YouTube</span>
-                </a>
-                <a class="sdcp-pill" href="https://www.tiktok.com/@ludum_space" target="_blank" rel="noopener">
-                    <span class="sdcp-icon"><svg width="16" height="16" viewBox="0 0 448 512" fill="#fff" style="width:16px;height:16px;"><path d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.2 71.2V0h88a121.2 121.2 0 0 0 1.9 22.2A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1Z"/></svg></span>
-                    <span>Guarda i nostri video su TikTok</span>
-                </a>
-            </div>
+    <div class="sdcp-widget" id="sdcpWidget">
+        <a class="sdcp-pill" href="https://www.youtube.com/@LudumInteractiveWorld" target="_blank" rel="noopener">
+            <span class="sdcp-icon"><svg width="16" height="16" viewBox="0 0 576 512" fill="#fff" style="width:16px;height:16px;"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64s-170.8 0-213.4 11.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.1 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></span>
+            <span>Seguici su YouTube</span>
+        </a>
+        <a class="sdcp-pill" href="https://www.tiktok.com/@ludum_space" target="_blank" rel="noopener">
+            <span class="sdcp-icon"><svg width="16" height="16" viewBox="0 0 448 512" fill="#fff" style="width:16px;height:16px;"><path d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.2 71.2V0h88a121.2 121.2 0 0 0 1.9 22.2A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1Z"/></svg></span>
+            <span>Guarda i nostri video su TikTok</span>
+        </a>
+    </div>
 
-            <!-- Sezione Footer (sostituibile se necessario) -->
-            <th:block layout:fragment="footer">
-                <th:block th:replace="~{site01/fragments/footer :: footer}"></th:block>
-            </th:block>
-            
-        </div>
+    <!-- Sezione Footer (sostituibile se necessario) -->
+    <th:block layout:fragment="footer">
+        <th:block th:replace="~{site01/fragments/footer :: footer}"></th:block>
+    </th:block>
 
-        <!-- Script JS e Scroll to top -->
-        <th:block layout:fragment="scripts">
-            <th:block th:replace="~{site01/fragments/scripts :: scripts}"></th:block>
-        </th:block>
+</div>
 
-    </body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                var w = document.getElementById('sdcpWidget');
-                if (w) w.classList.add('sdcp-visible');
-            }, 2500);
-        });
-    </script>
+<!-- Banner cookie (stile Educeet) -->
+<div class="sd-cookie" id="sdCookie" role="dialog" aria-live="polite" aria-label="Informativa sui cookie">
+    <h5 class="sd-cookie-title">Cookie</h5>
+    <p class="sd-cookie-text">
+        Questo sito utilizza solo cookie tecnici, necessari al suo funzionamento.
+        Non usiamo cookie di profilazione.
+        <a th:href="@{/front/34/Cookie-Policy}">Leggi la Cookie Policy</a>
+    </p>
+    <a href="#" role="button" class="it-btn-yellow theme-bg" id="sdCookieOk">
+                <span>
+                    <span class="text-1">Ho capito</span>
+                    <span class="text-2">Ho capito</span>
+                </span>
+    </a>
+</div>
+
+<!-- Script JS e Scroll to top -->
+<th:block layout:fragment="scripts">
+    <th:block th:replace="~{site01/fragments/scripts :: scripts}"></th:block>
+</th:block>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+            var w = document.getElementById('sdcpWidget');
+            if (w) w.classList.add('sdcp-visible');
+        }, 2500);
+
+        // Banner cookie: si mostra solo se non è già stato accettato (6 mesi)
+        var box = document.getElementById('sdCookie');
+        var ok = document.getElementById('sdCookieOk');
+        if (box && ok) {
+            var giaAccettato = document.cookie.split(';').some(function (c) {
+                return c.trim().indexOf('sd_cookie_ok=') === 0;
+            });
+            if (!giaAccettato) {
+                setTimeout(function () { box.classList.add('sd-cookie-visible'); }, 800);
+            }
+            ok.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.cookie = 'sd_cookie_ok=1; max-age=15552000; path=/; SameSite=Lax';
+                box.classList.remove('sd-cookie-visible');
+            });
+        }
+    });
+</script>
 
 </html>

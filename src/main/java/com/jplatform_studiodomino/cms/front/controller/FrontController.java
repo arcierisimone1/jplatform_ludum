@@ -301,11 +301,24 @@ public class FrontController {
             model.addAttribute("section", section);
             model.addAttribute("contents", section.getContenuti());
 
-            // ===== TEAM AZIENDALE (solo per la sezione "L'azienda", id 312) =====
-            // Mostra gli Amministratori del gestionale come "il nostro team",
-            // riusando gli stessi dati/foto già gestiti in /admin/amministratori.
-            // NB: id diverso da quello del sito Formazione (dove "L'azienda" è 313
-            // dopo la fusione con "Sede") perché qui è un database CMS separato.
+            // Sezione padre diretta (con le sue sottosezioni), usata dalla sidebar "Altre sezioni"
+// per mostrare i veri fratelli della sezione corrente invece della categoria di
+// primo livello del menu (comportamento sbagliato su gerarchie a più di 2 livelli).
+            if (section.getIdParent() != null && !section.getIdParent().isEmpty() && !"0".equals(section.getIdParent())) {
+                try {
+                    Section directParent = dispatchService.loadSection(
+                            section.getIdParent(),
+                            FrontContentFilter.builder().build(),
+                            config.getImagesRepositoryWeb(), idSito, true, true, null);
+                    if (directParent != null) {
+                        model.addAttribute("parentSection", directParent);
+                    }
+                } catch (Exception e) {
+                    log.warn("Errore caricamento sezione padre diretta per sidebar: {}", section.getIdParent(), e);
+                }
+            }
+
+
             if (section.getId() != null && section.getId() == 312) {
                 try {
                     List<Utente> team = utenteService.getAllUtenti().stream()
